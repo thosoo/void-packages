@@ -1,8 +1,7 @@
 # Template file for 'python3-protobuf'
 pkgname=python3-protobuf
-version=4.21.5
+version=4.21.11
 revision=1
-wrksrc="${pkgname#*-}-${version}"
 build_style=python3-module
 hostmakedepends="python3-setuptools python3-wheel"
 depends="python3-setuptools python3-six"
@@ -11,7 +10,7 @@ maintainer="Andrew J. Hesford <ajh@sideband.org>"
 license="BSD-3-Clause"
 homepage="https://developers.google.com/protocol-buffers/"
 distfiles="${PYPI_SITE}/p/protobuf/protobuf-${version}.tar.gz"
-checksum=eb1106e87e095628e96884a877a51cdb90087106ee693925ec0a300468a9be3a
+checksum=2c6a4d13732d9b094db31b3841986c38b17ac61a3fe05ee26a779d94c4c3fb43
 
 build_options="cppext"
 build_options_default="cppext"

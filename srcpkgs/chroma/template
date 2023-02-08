@@ -1,6 +1,6 @@
 # Template file for 'chroma'
 pkgname=chroma
-version=2.2.0
+version=2.4.0
 revision=1
 build_wrksrc="cmd/chroma"
 build_style=go
@@ -11,7 +11,7 @@ maintainer="Daniel Lewan <vision360.daniel@gmail.com>"
 license="MIT"
 homepage="https://github.com/alecthomas/chroma"
 distfiles="https://github.com/alecthomas/chroma/archive/v${version}.tar.gz"
-checksum=6870cb8c47897f2a75abaf3e6cbb160989b4e915b86fdcd9322fb17e073ccd81
+checksum=15289ce536e734767e06816c6bb33537121c3b70c2ecbc3431afe95942bb0fce
 
 do_check() {
 	go test -v

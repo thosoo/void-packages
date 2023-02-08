@@ -1,6 +1,6 @@
 # Template file for 'git-cliff'
 pkgname=git-cliff
-version=0.9.0
+version=0.10.0
 revision=1
 archs="x86_64* i686* aarch64* arm*" # ring
 build_style=cargo
@@ -13,7 +13,7 @@ license="GPL-3.0-only"
 homepage="https://github.com/orhun/git-cliff"
 changelog="https://raw.githubusercontent.com/orhun/git-cliff/main/CHANGELOG.md"
 distfiles="https://github.com/orhun/git-cliff/archive/refs/tags/v${version}.tar.gz"
-checksum=0d7390ff23ee16efc93e8d7f2061cfa16c079ed609bcee045e67590c62eccd07
+checksum=c77b7b38edae80b3a66c96f15d0bc3eaaa0bc55e1d3fbc8187c55070306188c1
 
 post_install() {
 	vdoc README.md
@@ -23,4 +23,7 @@ post_install() {
 	vcompletion "_git-cliff" zsh
 	vcompletion "git-cliff.fish" fish
 	vcompletion "git-cliff.bash" bash
+
+	OUT_DIR=${PWD} vtargetrun ${DESTDIR}/usr/bin/git-cliff-mangen
+	vman git-cliff.1
 }
